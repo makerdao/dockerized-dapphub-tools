@@ -1,0 +1,14 @@
+dist: bionic
+language: python
+sudo: required
+python:
+- 3.6
+services:
+- docker
+before_install:
+- sudo apt-get update
+deploy:
+  - provider: script
+    script: bash ./.travis/build.sh $TRAVIS_BUILD_NUMBER
+    on:
+      branch: master
