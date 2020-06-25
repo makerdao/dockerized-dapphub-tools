@@ -1,8 +1,5 @@
 dist: bionic
-language: python
 sudo: required
-python:
-- 3.6
 services:
 - docker
 before_install:
