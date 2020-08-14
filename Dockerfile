@@ -2,7 +2,7 @@ FROM nixos/nix
 
 RUN apk update && \
     set -ex && \
-    apk --no-cache add curl jq bc bzip2 git sudo && \
+    apk --no-cache add curl jq bc bzip2 git sudo bash && \
     echo 'sandbox = false' > /etc/nix/nix.conf && \
     adduser maker --home /home/maker --disabled-password --gecos "" --shell /bin/sh && \
     echo "maker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/maker &&\
